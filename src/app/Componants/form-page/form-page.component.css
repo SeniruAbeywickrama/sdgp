@@ -1,13 +1,39 @@
 .main-wrap {
-  width: 100%;
-  height: 500px;
+  margin-bottom: 500px;
+  margin-left: 220px;
+  width: 70%;
+  height: 600px;
   -webkit-box-shadow: 0px 0px 5px 0px rgba(189,195,199,1);
   -moz-box-shadow: 0px 0px 5px 0px rgba(189,195,199,1);
   box-shadow: 0px 0px 5px 0px rgba(189,195,199,1);
   margin-top: 25px;
   border-radius: 10px;
   background-color: white;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 1px black;
 
+}
+.col-12{
+  margin-left: 300px;
+  padding:100px 100px 100px 100px;
+}
+span.line01{
+ display: inline-block;
+  width: 500px;
+}
+.vl {
+  border-left: 3px solid #57606f;
+  height: 420px;
+  position: absolute;
+  margin-left: 140px;
+  top:40%;
+}
+
+.login-content{
+  width: 150px;
+  margin-top: -310px;
 }
 
 .text-create-account{
@@ -20,13 +46,15 @@
 .login-text {
   font-family: 'Ubuntu', sans-serif;
   color: #2c3e50;
-  font-size: 22px;
+  font-size: 30px;
   font-weight: bold;
   padding-top: 10px;
+  margin-left: 170px;
 }
 
 .item-wrap{
-  width: 100%;
+  margin-left: 200px;
+  width: 90%;
   height: 50px;
   display: flex;
   border-bottom: 1px solid #bdc3c7;
@@ -34,14 +62,17 @@
 
 .icon-wrap{
   width: 50px;
-  height: 100%;
-  text-align: center;
-  padding-top: 8px;
+  height: 50px;
+  padding-top: 20px;
+  padding-left: 80px;
   font-size: 17px;
 }
 .text-input{
-  width: 100%;
+  width: 50%;
   border: none;
+  background-color: transparent;
+  color: black;
+  font-size: 19px;
 }
 .text-input:focus{
   outline: none;
@@ -64,4 +95,30 @@
 }
 .social-wrap:hover{
   cursor: pointer;
+}
+.image-wrap{
+  background-image: url("src/assets/logo.PNG");
+  width: 250px;
+  height: 250px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top:100px;
+  margin-left:-200px;
+}
+.submit{
+  background-color: deeppink;
+  width: 250px;
+  height: 38px;
+  margin-left: 160px;
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+  border-radius: 7px;
+  border: none;
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(189,195,199,1);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(189,195,199,1);
+  box-shadow: 0px 0px 5px 0px rgba(189,195,199,1);
+}
+.submit:hover{
+  background-color: purple;
 }

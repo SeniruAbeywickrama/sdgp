@@ -1,0 +1,203 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Carter+One&family=Cinzel:wght@700&family=Hanalei&family=Montserrat&family=Original+Surfer&family=Righteous&display=swap');
+
+.bg-img {
+  /* The image used */
+  background-image: url("src/assets/img.jpg");
+  min-height: 580px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* Needed to position the navbar */
+  position: relative;
+}
+.anim-box{
+  height: 300px;
+  overflow: hidden;
+  padding-top: 400px;
+  padding-right: 400px;
+}
+
+.line {
+  color: white;
+  text-shadow: rgb(0, 0, 0) 2px 2px 2px;
+  position: relative;
+  width: 14em;
+  margin: 0 auto;
+  border-right: 2px solid rgba(255, 255, 255, 0.75);
+  font-size: 66px;
+  text-align: center;
+  white-space: nowrap;
+  font-family: 'Righteous', cursive;
+  overflow: hidden;transform: translateY(-50%);
+}
+/*Animation*/
+.anim-typewriter {
+  animation: typewriter 4s steps(40) 1s 1 normal both,
+  blinkTextCursor 500ms steps(40) infinite normal;
+}
+
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 16.3em;
+  }
+}
+
+@keyframes blinkTextCursor {
+  from {
+    border-right-color: rgba(255, 255, 255, 0.75);
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
+
+
+.first-bar{
+  padding:30px 30px;
+  background-color:#f1f2f6;
+  border-radius: 5px;
+  height: 530px;
+
+}
+.slide-bar{
+  float: right;
+}
+h2{
+  font-size: 55px;
+  font-family: 'Original Surfer', cursive;
+  color: #4b4b4b;
+}
+p{
+  font-size: 16px;
+}
+.discrip01{
+  float: left;
+  font-family: 'Roboto', sans-serif;
+  padding-left: 50px;
+  padding-top: 50px;
+}
+
+
+
+.slides {
+  padding: 0;
+  width: 650px;
+  height: 500px;
+  display: block;
+  margin: 0 auto;
+  position: relative;
+}
+
+.slides * {
+  user-select: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+}
+
+.slides input { display: none; }
+
+.slide-container { display: block; }
+
+.slide {
+  top: 0;
+  opacity: 0;
+  width: 609px;
+  height: 420px;
+  display: block;
+  position: absolute;
+
+  transform: scale(0);
+
+  transition: all .7s ease-in-out;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+}
+
+.nav label {
+  width: 200px;
+  height: 100%;
+  display: none;
+  position: absolute;
+
+  opacity: 0;
+  z-index: 9;
+  cursor: pointer;
+
+  transition: opacity .2s;
+
+  color: #FFF;
+  font-size: 156pt;
+  text-align: center;
+  line-height: 380px;
+  font-family: "Varela Round", sans-serif;
+  background-color: rgba(255, 255, 255, .3);
+  text-shadow: 0px 0px 15px rgb(119, 119, 119);
+}
+
+.slide:hover + .nav label { opacity: 0.5; }
+
+.nav label:hover { opacity: 1; }
+
+.nav .next { right: 0; }
+
+input:checked + .slide-container  .slide {
+  opacity: 1;
+
+  transform: scale(1);
+
+  transition: opacity 1s ease-in-out;
+}
+
+input:checked + .slide-container .nav label { display: block; }
+
+.nav-dots {
+  width: 100%;
+  bottom: 9px;
+  height: 11px;
+  display: block;
+  position: absolute;
+  text-align: center;
+}
+
+.nav-dots .nav-dot {
+  top: -5px;
+  width: 11px;
+  height: 11px;
+  margin: 0 4px;
+  position: relative;
+  border-radius: 100%;
+  display: inline-block;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.nav-dots .nav-dot:hover {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+input#img-1:checked ~ .nav-dots label#img-dot-1,
+input#img-2:checked ~ .nav-dots label#img-dot-2,
+input#img-3:checked ~ .nav-dots label#img-dot-3,
+input#img-4:checked ~ .nav-dots label#img-dot-4,
+input#img-5:checked ~ .nav-dots label#img-dot-5,
+input#img-6:checked ~ .nav-dots label#img-dot-6 {
+  background: rgba(0, 0, 0, 0.8);
+}
+.second-bar{
+  background-color: red;
+  height: 300px;
+}
+.third-bar{
+  background-color: #16a085;
+  height: 300px;
+}

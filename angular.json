@@ -120,5 +120,8 @@
       }
     }
   },
-  "defaultProject": "SDGP"
+  "defaultProject": "SDGP",
+  "cli": {
+    "analytics": false
+  }
 }
