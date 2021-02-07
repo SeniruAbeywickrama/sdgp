@@ -7,6 +7,8 @@ import {HomePageComponent} from './Componants/home-page/home-page.component';
 import {FormPageComponent} from './Componants/form-page/form-page.component';
 import { PriceComponent } from './Componants/price/price.component';
 import { AboutPageComponent } from './Componants/about-page/about-page.component';
+import { SignupPageComponent } from './Componants/form-page/signUp/signup-page/signup-page.component';
+import {RouterModule} from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -14,11 +16,13 @@ import { AboutPageComponent } from './Componants/about-page/about-page.component
     HomePageComponent,
     FormPageComponent,
     PriceComponent,
-    AboutPageComponent
+    AboutPageComponent,
+    SignupPageComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

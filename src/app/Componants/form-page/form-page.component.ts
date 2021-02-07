@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-form-page',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormPageComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
+  }
+
+  accessSignPage() {
+    this.router.navigate(['/SignUp']).then(resp => {
+      console.log('Done');
+    }).catch(error => {
+      console.log(error);
+    });
   }
 
 }

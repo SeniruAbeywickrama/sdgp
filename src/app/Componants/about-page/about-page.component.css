@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500&family=Fredoka+One&family=Montserrat&display=swap');
 
 .main-wrap{
-  background-color:#fffa65;
+  background: linear-gradient(-45deg,#e73c7e,#fff200, #23a6d5, #32ff7e);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
 }
 
 *, *:before, *:after {
@@ -26,9 +28,22 @@
 .about-section {
   padding: 55px;
   text-align: center;
-  background-color: #cc8e35;
-  color: white;
+  color: #4b4b4b;
   font-family: 'Cinzel', serif;
+  background: linear-gradient(-45deg,#e73c7e,#fff200, #23a6d5, #32ff7e);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .container {

@@ -1,22 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Hanalei&family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amiri&family=BenchNine:wght@300&family=Cinzel&family=Montserrat&display=swap');
 
 .upper-box{
-  height: 170px;
+  height: 190px;
   background-color: #FFFFFF;
 
 
 }
 .logoImg{
   background-image: url("/assets/logo.PNG");
-  width: 200px;
-  height: 150px;
+  width: 300px;
+  height: 180px;
   margin-left: 100px;
+  margin-top: -20px;
 }
 
 
 body{
   border:none;
-  background-color: #cd6133;
+  background-color: white;
 }
 
 /* Position the navbar container inside the image */
@@ -31,9 +32,8 @@ body{
 .topnav {
   overflow: hidden;
   background-color: transparent;
-  /*box-shadow: 9px 11px 26px -3px rgba(0,0,0,0.81);*/
-  /*-webkit-box-shadow: 9px 11px 26px -3px rgba(0,0,0,0.81);*/
-  /*-moz-box-shadow: 9px 11px 26px -3px rgba(0,0,0,0.81);*/
+  font-size: 16px;
+
 }
 /*search bar*/
 .search_box {
@@ -41,12 +41,14 @@ body{
   transform: translate(-50%, -50%);
   background: #2f3640;
   margin-left: 630px;
-  margin-top: -20px;
+  margin-top: -30px;
   height: 40px;
   border-radius:40px;
   padding: 10px;
 }
-
+a{
+  font-family: 'Amiri', serif;
+}
 .search_box:hover > .search_txt {
   width: 240px;
   padding: 0 6px;
@@ -130,8 +132,11 @@ body{
   border: 3px solid black;
   text-align: center;
   margin-left:680px;
-  margin-top: -70px;
+  margin-top:-90px;
   border-radius: 30px 30px 10px 10px;
+}
+.login:focus{
+  border: none;
 }
 .login a{
   float: left;

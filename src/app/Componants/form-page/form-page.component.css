@@ -1,19 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@300&family=Montserrat&display=swap');
 .main-wrap {
   margin-bottom: 500px;
   margin-left: 220px;
   width: 70%;
-  height: 600px;
-  -webkit-box-shadow: 0px 0px 5px 0px rgba(189,195,199,1);
-  -moz-box-shadow: 0px 0px 5px 0px rgba(189,195,199,1);
-  box-shadow: 0px 0px 5px 0px rgba(189,195,199,1);
+  height: 650px;
   margin-top: 25px;
   border-radius: 10px;
-  background-color: white;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  border: 1px black;
+  border: 1px solid black;
+  background: linear-gradient(-45deg, #f5f6fa, #e73c7e, #23a6d5, #32ff7e);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
 
+}
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 .col-12{
   margin-left: 300px;
@@ -24,7 +35,7 @@ span.line01{
   width: 500px;
 }
 .vl {
-  border-left: 3px solid #57606f;
+  border-left: 3px solid black;
   height: 420px;
   position: absolute;
   margin-left: 140px;
@@ -45,7 +56,7 @@ span.line01{
 }
 .login-text {
   font-family: 'Ubuntu', sans-serif;
-  color: #2c3e50;
+  color: black;
   font-size: 30px;
   font-weight: bold;
   padding-top: 10px;
@@ -59,7 +70,18 @@ span.line01{
   display: flex;
   border-bottom: 1px solid #bdc3c7;
 }
-
+.button-wrap{
+  text-align:center;
+  padding-left: 100px;
+}
+.button-h3{
+  padding-left: 170px;
+}
+.para-wrap{
+  font-family: 'Big Shoulders Display', cursive;
+  padding-left: 160px;
+  margin-top: 10px;
+}
 .icon-wrap{
   width: 50px;
   height: 50px;
@@ -97,7 +119,7 @@ span.line01{
   cursor: pointer;
 }
 .image-wrap{
-  background-image: url("src/assets/logo.PNG");
+  background-image: url("src/assets/logo2.png");
   width: 250px;
   height: 250px;
   background-position: center;
@@ -113,12 +135,11 @@ span.line01{
   margin-left: 160px;
   font-size: 16px;
   font-family: 'Roboto', sans-serif;
-  border-radius: 7px;
+  border-radius: 55px;
   border: none;
-  -webkit-box-shadow: 0px 0px 5px 0px rgba(189,195,199,1);
-  -moz-box-shadow: 0px 0px 5px 0px rgba(189,195,199,1);
-  box-shadow: 0px 0px 5px 0px rgba(189,195,199,1);
 }
+
 .submit:hover{
   background-color: purple;
+  cursor: pointer;
 }
