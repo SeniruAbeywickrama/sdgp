@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Amiri&family=BenchNine:wght@300&family=Cinzel&family=Montserrat&display=swap');
 
 .upper-box{
-  height: 190px;
+  height: 210px;
   background-color: #FFFFFF;
 
 
@@ -40,8 +40,8 @@ body{
   position: absolute;
   transform: translate(-50%, -50%);
   background: #2f3640;
-  margin-left: 630px;
-  margin-top: -30px;
+  margin-left: 670px;
+  margin-top: -10px;
   height: 40px;
   border-radius:40px;
   padding: 10px;
@@ -132,7 +132,7 @@ a{
   border: 3px solid black;
   text-align: center;
   margin-left:680px;
-  margin-top:-90px;
+  margin-top:-115px;
   border-radius: 30px 30px 10px 10px;
 }
 .login:focus{

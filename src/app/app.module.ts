@@ -9,6 +9,8 @@ import { PriceComponent } from './Componants/price/price.component';
 import { AboutPageComponent } from './Componants/about-page/about-page.component';
 import { SignupPageComponent } from './Componants/form-page/signUp/signup-page/signup-page.component';
 import {RouterModule} from '@angular/router';
+import {FormsModule} from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -19,11 +21,13 @@ import {RouterModule} from '@angular/router';
     AboutPageComponent,
     SignupPageComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    RouterModule,
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        RouterModule,
+        FormsModule,
+        HttpClientModule,
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

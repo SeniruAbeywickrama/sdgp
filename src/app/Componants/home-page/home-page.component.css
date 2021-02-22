@@ -1,10 +1,10 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Carter+One&family=Cinzel:wght@700&family=Hanalei&family=Montserrat&family=Original+Surfer&family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Istok+Web');
 
 .bg-img {
   /* The image used */
-  background-image: url("src/assets/img.jpg");
-  min-height: 580px;
+  min-height: 400px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -14,8 +14,8 @@
 .anim-box{
   height: 300px;
   overflow: hidden;
-  padding-top: 400px;
   padding-right: 400px;
+  padding-top: 50px;
 }
 
 .line {
@@ -44,6 +44,10 @@
   to {
     width: 16.3em;
   }
+}
+.contact-bar{
+  height: 100px;
+  background-color: black;
 }
 
 @keyframes blinkTextCursor {
@@ -193,10 +197,31 @@ input#img-5:checked ~ .nav-dots label#img-dot-5,
 input#img-6:checked ~ .nav-dots label#img-dot-6 {
   background: rgba(0, 0, 0, 0.8);
 }
-.second-bar{
-  background-color: red;
-  height: 300px;
+@keyframes slidy {
+  0% { left: 0%; }
+  20% { left: 0%; }
+  25% { left: -100%; }
+  45% { left: -100%; }
+  50% { left: -200%; }
+  70% { left: -200%; }
+  75% { left: -300%; }
+  95% { left: -300%; }
+  100% { left: -400%; }
 }
+
+div#slider { overflow: hidden;
+height: 680px}
+div#slider figure img { width: 20%; float: left; }
+div#slider figure {
+  position: relative;
+  width: 500%;
+  margin: 0;
+  left: 0;
+  text-align: left;
+  font-size: 0;
+  animation: 30s slidy infinite;
+}
+
 .third-bar{
   background-color: #16a085;
   height: 300px;

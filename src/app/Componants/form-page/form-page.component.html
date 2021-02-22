@@ -1,8 +1,6 @@
 
 <div class="main-wrap">
 
-
-
     <div class="col-12 ">
 
       <span class="line01">
@@ -21,7 +19,7 @@
         <div class="icon-wrap" >
           <i class="fas fa-user-friends"></i>
         </div>
-        <input class="text-input" type="text"  placeholder="User Name" >
+        <input [(ngModel)]="email" class="text-input" id="email" type="email"  placeholder="name@example.com" >
         <div class="icon-wrap">
           <i class="fas fa-address-card"></i>
         </div>
@@ -32,7 +30,7 @@
         <div class="icon-wrap" >
           <i class="fas fa-key"></i>
         </div>
-        <input class="text-input" type="password" placeholder="password">
+        <input [(ngModel)]="password" class="text-input" type="password" placeholder="password">
         <div class="icon-wrap">
           <i class="fas fa-unlock-alt"></i>
         </div>
@@ -40,25 +38,21 @@
       <br>
       <br>
       <div class="button-wrap">
-        <button class="submit"><i class="fas fa-power-off"></i>      Continue</button>
+        <button class="submit" ><i class="fas fa-power-off"></i>      Continue</button>
         <br>
         <h3 class="button-h3">OR</h3>
           <br>
-        <button (click)="accessSignPage()" class="submit"><i class="fas fa-user-plus"></i>      Sign Up</button>
+        <button class="submit" (click)="accessSignPage()"><i class="fas fa-user-plus"></i>      Sign Up</button>
         <br>
-        <div class="para-wrap">
+        <div class="policy-wrap">
             Terms of services and Privacy Policy.<br>
-            <h4>Copyright   <i class="far fa-copyright"></i> by Picerr.Me</h4>
+            <h5>Copyright   <i class="far fa-copyright"></i> by Picerr.Me</h5>
           </div>
       </div>
       <br>
 
-
-
         </span>
       </div>
-
-
     </div>
 
 </div>

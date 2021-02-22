@@ -1,35 +1,35 @@
 <div class="main-wrap">
   <div class="topic-bar">
       <h1 class="topic">
-        Seller Sign-Up..
+        Create an account
       </h1>
   </div>
   <div class="middle-box">
     <div class="form-wrap">
       <div class="icon-wrap" >
-        <label class="label-tag">First Name<p class="p1"></p></label>
+        <label class="label-tag">First Name</label>
       </div>
-      <input class="form-input" type="text"  placeholder="First Name" >
+      <input [(ngModel)]="firstName" class="form-input" type="text"  placeholder="First Name" >
       <div class="icon-wrap" >
         <label class="label-tag">Last Name</label>
       </div>
-      <input class="form-input" type="text"  placeholder="Last Name" >
+      <input [(ngModel)]="lastName" class="form-input" type="text"  placeholder="Last Name" >
     </div>
     <br>
 
     <div class="form-wrap">
       <div class="icon-wrap" >
-        <label class="label-tag">User Name</label>
+        <label class="label-tag">Store Name</label>
       </div>
-      <input class="form-input" type="text"  >
+      <input [(ngModel)]="storeName" class="form-input" type="text"  >
     </div>
     <br>
 
     <div class="form-wrap">
       <div class="icon-wrap" >
-        <label class="label-tag">Email</label>
+        <label class="label-tag">Email address</label>
       </div>
-      <input class="form-input" type="email"  placeholder="" >
+      <input [(ngModel)]="email" class="form-input" id="email" type="email"  placeholder="name@example.com" >
     </div>
     <br>
 
@@ -37,7 +37,7 @@
       <div class="icon-wrap" >
         <label class="label-tag">Phone No</label>
       </div>
-      <input class="form-input" type="tel"  placeholder="Mobile/Fix" >
+      <input [(ngModel)]="tel" class="form-input" type="tel"  placeholder="Mobile/Fix" >
     </div>
     <br>
 
@@ -45,7 +45,7 @@
       <div class="icon-wrap" >
         <label class="label-tag">Password</label>
       </div>
-      <input class="form-input" type="password" placeholder="" >
+      <input [(ngModel)]="password" class="form-input" id="password" type="password" placeholder="" >
     </div>
     <br>
 
@@ -58,7 +58,7 @@
     <br>
     <br>
 
-    <button class="sign-btn">Sign Up</button>
+    <button class="sign-btn" (click)="registerUser()">Sign Up</button>
   </div>
   <br>
   <br>
