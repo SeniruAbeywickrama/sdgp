@@ -1,10 +1,264 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500&family=Fredoka+One&family=Montserrat&display=swap');
+/*@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500&family=Fredoka+One&family=Montserrat&display=swap');*/
 
-.main-wrap{
-  background: linear-gradient(-45deg,#e73c7e,#fff200, #23a6d5, #32ff7e);
-  background-size: 400% 400%;
-  animation: gradient 15s ease infinite;
+/*.main-wrap{*/
+/*  background: linear-gradient(-45deg,#e73c7e,#fff200, #23a6d5, #32ff7e);*/
+/*  background-size: 400% 400%;*/
+/*  animation: gradient 15s ease infinite;*/
+/*}*/
+
+/**, *:before, *:after {*/
+/*  box-sizing: inherit;*/
+/*}*/
+
+/*.column {*/
+/*  float: left;*/
+/*  width: 30%;*/
+/*  margin-bottom: 16px;*/
+/*  padding: 0 8px;*/
+/*}*/
+/*.team{*/
+/*  font-size: 55px;*/
+/*  font-family: 'Fredoka One', cursive;*/
+/*}*/
+
+/*.card {*/
+/*  margin: 8px;*/
+/*}*/
+
+/*.about-section {*/
+/*  padding: 55px;*/
+/*  text-align: center;*/
+/*  color: #4b4b4b;*/
+/*  font-family: 'Cinzel', serif;*/
+/*  background: linear-gradient(-45deg,#e73c7e,#fff200, #23a6d5, #32ff7e);*/
+/*  background-size: 400% 400%;*/
+/*  animation: gradient 15s ease infinite;*/
+/*}*/
+/*@keyframes gradient {*/
+/*  0% {*/
+/*    background-position: 0% 50%;*/
+/*  }*/
+/*  50% {*/
+/*    background-position: 100% 50%;*/
+/*  }*/
+/*  100% {*/
+/*    background-position: 0% 50%;*/
+/*  }*/
+/*}*/
+
+/*.container {*/
+/*  padding: 0px 18px;*/
+/*  margin-top: -225px;*/
+/*  border: 1px solid black;*/
+/*  background-color:white;*/
+/*  border-radius: 10px;*/
+/*  width: 280px;*/
+/*  text-shadow: 0px 0px 15px rgb(119, 119, 119);*/
+/*}*/
+
+/*.container::after, .row::after {*/
+/*  content: "";*/
+/*  clear: both;*/
+/*  display: table;*/
+/*}*/
+
+/*.title {*/
+/*  color: grey;*/
+/*}*/
+
+/*.button {*/
+/*  border: none;*/
+/*  outline: 0;*/
+/*  display: inline-block;*/
+/*  padding: 8px;*/
+/*  color: white;*/
+/*  background-color: #000;*/
+/*  text-align: center;*/
+/*  cursor: pointer;*/
+/*  width: 100%;*/
+/*}*/
+
+/*.button:hover {*/
+/*  background-color: #213663;*/
+/*}*/
+
+/*@media screen and (max-width: 650px) {*/
+/*  .column {*/
+/*    width: 100%;*/
+/*    display: block;*/
+/*  }*/
+/*}*/
+/* Variables colors*/
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500&family=Fredoka+One&family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Montserrat&display=swap');
+/* HTML, body */
+html, body { height: 100%; }
+body {
+  font-size: 16px;
+  line-height: 1.7;
+  color:  #2c3e50;
+  background-color: #fcfcfc;
 }
+
+
+
+/* Pattern and color overlay */
+.section-pattern-overlay {
+  width: 100%;
+  height: 400px;
+
+  background-color: rgba(0, 0, 0, .8);
+
+  background-position: center center;
+  padding: 15px;
+
+
+
+  color: #f1f1f1;
+}
+.container-head{
+  font-family: 'Cinzel', serif;
+}
+.head{
+
+  font-size: 50px;}
+span { color:  #48a65b; }
+.uc{
+  font-size: 90px;
+}
+.container-middle{
+  text-align: center;
+}
+
+
+
+/* Welcome section */
+.welcome {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-image: url("src/assets/aboutUs.jpg");
+  background-size: cover;
+
+}
+
+
+
+/* Section center */
+.section-center {
+  width: 100%;
+  height: 100%;
+  display: table;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+.section-align {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+ul {
+  display: inline-block;
+  position: relative;
+  margin-bottom: 20px;
+}
+li { padding: 0 5px; }
+
+
+
+/*Section */
+.section {
+  margin-top: 100px;
+  text-align: center;
+}
+.section-heading {
+  margin-bottom: 20px;
+  padding-bottom: 5px;
+  text-transform: uppercase;
+  border-bottom: 5px solid #eee;
+  font-size: 30px;
+}
+. span {
+  display: inline-block;
+  padding-bottom: 5px;
+  margin-bottom: -10px;
+  border-bottom: 5px solid  #48a65b;
+}
+.abt{
+  font-family: "Courier New", serif;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+
+
+
+
+/* CTA section */
+.cta {
+  background: url("src/assets/searchbq1.jpg");
+  height: 800px;
+  background-size: cover;
+}
+.ourTm{
+  font-size: 50px;
+  font-family: 'Cinzel', serif;
+}
+.section-pattern-overlay {
+  padding: 70px 0;
+
+}
+/*footer*/
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Float four columns side by side */
+/*.column1,.column2,.column3 {*/
+/*  float: left;*/
+/*  width: 33%;*/
+/*  height: 35px;*/
+/*  padding: 300px;*/
+/*  background-image: url("src/assets/person.png");*/
+/*  background-size: auto;*/
+/*  background-position: center center;*/
+
+/*}*/
+
+/* Remove extra left and right margins, due to padding in columns */
+
+
+/* Clear floats after the columns */
+/*.row:after {*/
+/*  content: "";*/
+/*  display: table;*/
+/*  clear: both;*/
+/*}*/
+
+/* Style the counter cards */
+/*.card {*/
+/*  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); !* this adds the "card" effect *!*/
+/*  padding: 16px;*/
+/*  text-align: center;*/
+/*  background-color: red;*/
+
+/*}*/
+
+/* Responsive columns - one column layout (vertical) on small screens */
+/*@media screen and (max-width: 600px) {*/
+/*  .column {*/
+/*    width: 100%;*/
+/*    height: 5px;*/
+/*    display: block;*/
+/*    margin-bottom: 20px;*/
+/*  }*/
+/*}*/
 
 *, *:before, *:after {
   box-sizing: inherit;
@@ -23,6 +277,8 @@
 
 .card {
   margin: 8px;
+  height: 100%;
+  width: 100%;
 }
 
 .about-section {
@@ -46,7 +302,7 @@
   }
 }
 
-.container {
+.container1 {
   padding: 0px 18px;
   margin-top: -225px;
   border: 1px solid black;
@@ -54,9 +310,10 @@
   border-radius: 10px;
   width: 280px;
   text-shadow: 0px 0px 15px rgb(119, 119, 119);
+
 }
 
-.container::after, .row::after {
+.container1::after, .row::after {
   content: "";
   clear: both;
   display: table;
@@ -87,4 +344,47 @@
     width: 100%;
     display: block;
   }
+}
+
+
+/*photo hovers*/
+.container2 {
+  position: relative;
+  width: 65%;
+}
+.image {
+  display: block;
+  width: 100%;
+  height: 270px;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #008CBA;
+  overflow: hidden;
+  width: 100%;
+  height: 0px;
+  transition: .5s ease;
+}
+
+.container2:hover .overlay {
+  height: 100%;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.abtUs{
+  margin-left: 130px;
 }
