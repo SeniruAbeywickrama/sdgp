@@ -11,6 +11,7 @@ import { SignupPageComponent } from './Componants/form-page/signUp/signup-page/s
 import {RouterModule} from '@angular/router';
 import {FormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
+import {CookieModule} from 'ngx-cookie';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import {HttpClientModule} from '@angular/common/http';
         RouterModule,
         FormsModule,
         HttpClientModule,
+        CookieModule.forRoot()
     ],
   providers: [],
   bootstrap: [AppComponent]

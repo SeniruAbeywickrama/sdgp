@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
 import {LoginServiceService} from '../../service/login-service.service';
+import {CookieService} from 'ngx-cookie';
+
 
 @Component({
   selector: 'app-form-page',
@@ -10,7 +12,7 @@ import {LoginServiceService} from '../../service/login-service.service';
 export class FormPageComponent implements OnInit {
   email: '';
   password: '';
-  constructor(private router: Router) {
+  constructor(private router: Router , private loginService: LoginServiceService, private cookieService: CookieService) {
   }
 
 
@@ -24,27 +26,27 @@ export class FormPageComponent implements OnInit {
       console.log(error);
     });
   }
-  //
-  // loginUser() {
-  //   this.loginService.loginUser(this.email, this.password).subscribe(resp => {
-  //     if (resp.message === 'success') {
-  //
-  //       const todayDate = new Date();
-  //       const tomorrow = new Date(todayDate);
-  //       tomorrow.setDate(tomorrow.getDate() + 1);
-  //       // const cookieOption = {
-  //       //   expires: tomorrow
-  //       // };
-  //       // this.cookieService.put('tokenData', resp.token, cookieOption);
-  //       this.router.navigate(['/']).then();
-  //
-  //     } else {
-  //       alert('Please Try Again!');
-  //     }
-  //
-  //   }, error => {
-  //     console.log(error);
-  //   });
-  //
-  // }
+
+  loginUser() {
+    this.loginService.loginUser(this.email, this.password).subscribe(resp => {
+      if (resp.message === 'success') {
+        // 24 hours for cookie
+        const todayDate = new Date();
+        const tomorrow = new Date(todayDate);
+        tomorrow.setDate(tomorrow.getDate() + 1);
+        const cookieOption = {
+          expires: tomorrow
+        };
+        this.cookieService.put('tokenData', resp.token, cookieOption);
+        alert('Success');
+        // import to main page
+        this.router.navigate(['/']).then();
+      } else {
+        alert('Please Try Again!');
+      }
+      console.log(resp);
+    }, error => {
+      console.log(error);
+    });
+  }
 }
