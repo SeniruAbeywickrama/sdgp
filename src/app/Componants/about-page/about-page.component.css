@@ -1,94 +1,3 @@
-/*@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500&family=Fredoka+One&family=Montserrat&display=swap');*/
-
-/*.main-wrap{*/
-/*  background: linear-gradient(-45deg,#e73c7e,#fff200, #23a6d5, #32ff7e);*/
-/*  background-size: 400% 400%;*/
-/*  animation: gradient 15s ease infinite;*/
-/*}*/
-
-/**, *:before, *:after {*/
-/*  box-sizing: inherit;*/
-/*}*/
-
-/*.column {*/
-/*  float: left;*/
-/*  width: 30%;*/
-/*  margin-bottom: 16px;*/
-/*  padding: 0 8px;*/
-/*}*/
-/*.team{*/
-/*  font-size: 55px;*/
-/*  font-family: 'Fredoka One', cursive;*/
-/*}*/
-
-/*.card {*/
-/*  margin: 8px;*/
-/*}*/
-
-/*.about-section {*/
-/*  padding: 55px;*/
-/*  text-align: center;*/
-/*  color: #4b4b4b;*/
-/*  font-family: 'Cinzel', serif;*/
-/*  background: linear-gradient(-45deg,#e73c7e,#fff200, #23a6d5, #32ff7e);*/
-/*  background-size: 400% 400%;*/
-/*  animation: gradient 15s ease infinite;*/
-/*}*/
-/*@keyframes gradient {*/
-/*  0% {*/
-/*    background-position: 0% 50%;*/
-/*  }*/
-/*  50% {*/
-/*    background-position: 100% 50%;*/
-/*  }*/
-/*  100% {*/
-/*    background-position: 0% 50%;*/
-/*  }*/
-/*}*/
-
-/*.container {*/
-/*  padding: 0px 18px;*/
-/*  margin-top: -225px;*/
-/*  border: 1px solid black;*/
-/*  background-color:white;*/
-/*  border-radius: 10px;*/
-/*  width: 280px;*/
-/*  text-shadow: 0px 0px 15px rgb(119, 119, 119);*/
-/*}*/
-
-/*.container::after, .row::after {*/
-/*  content: "";*/
-/*  clear: both;*/
-/*  display: table;*/
-/*}*/
-
-/*.title {*/
-/*  color: grey;*/
-/*}*/
-
-/*.button {*/
-/*  border: none;*/
-/*  outline: 0;*/
-/*  display: inline-block;*/
-/*  padding: 8px;*/
-/*  color: white;*/
-/*  background-color: #000;*/
-/*  text-align: center;*/
-/*  cursor: pointer;*/
-/*  width: 100%;*/
-/*}*/
-
-/*.button:hover {*/
-/*  background-color: #213663;*/
-/*}*/
-
-/*@media screen and (max-width: 650px) {*/
-/*  .column {*/
-/*    width: 100%;*/
-/*    display: block;*/
-/*  }*/
-/*}*/
-/* Variables colors*/
 
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500&family=Fredoka+One&family=Montserrat&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Montserrat&display=swap');
@@ -128,7 +37,11 @@ span { color:  #48a65b; }
   font-size: 90px;
 }
 .container-middle{
+  padding-top: 80px;
+
+  padding-left: 250px;
   text-align: center;
+  width: 1100px;
 }
 
 
@@ -174,11 +87,12 @@ li { padding: 0 5px; }
   text-align: center;
 }
 .section-heading {
+  font-family: 'Cinzel', serif;
   margin-bottom: 20px;
   padding-bottom: 5px;
   text-transform: uppercase;
   border-bottom: 5px solid #eee;
-  font-size: 30px;
+  font-size: 35px;
 }
 . span {
   display: inline-block;
@@ -189,7 +103,7 @@ li { padding: 0 5px; }
 .abt{
   font-family: "Courier New", serif;
   font-weight: bold;
-  font-size: 25px;
+  font-size: 28px;
 }
 
 
@@ -218,47 +132,6 @@ li { padding: 0 5px; }
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
-
-/* Float four columns side by side */
-/*.column1,.column2,.column3 {*/
-/*  float: left;*/
-/*  width: 33%;*/
-/*  height: 35px;*/
-/*  padding: 300px;*/
-/*  background-image: url("src/assets/person.png");*/
-/*  background-size: auto;*/
-/*  background-position: center center;*/
-
-/*}*/
-
-/* Remove extra left and right margins, due to padding in columns */
-
-
-/* Clear floats after the columns */
-/*.row:after {*/
-/*  content: "";*/
-/*  display: table;*/
-/*  clear: both;*/
-/*}*/
-
-/* Style the counter cards */
-/*.card {*/
-/*  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); !* this adds the "card" effect *!*/
-/*  padding: 16px;*/
-/*  text-align: center;*/
-/*  background-color: red;*/
-
-/*}*/
-
-/* Responsive columns - one column layout (vertical) on small screens */
-/*@media screen and (max-width: 600px) {*/
-/*  .column {*/
-/*    width: 100%;*/
-/*    height: 5px;*/
-/*    display: block;*/
-/*    margin-bottom: 20px;*/
-/*  }*/
-/*}*/
 
 *, *:before, *:after {
   box-sizing: inherit;
