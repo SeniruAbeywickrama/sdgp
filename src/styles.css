@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Amiri&family=BenchNine:wght@300&family=Cinzel&family=Montserrat&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200;300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gruppo&family=Julius+Sans+One&family=Kalam:wght@300&display=swap');
 .upper-box{
   height: 210px;
   background-color: #FFFFFF;
@@ -32,7 +33,7 @@ body{
 .topnav {
   overflow: hidden;
   background-color: transparent;
-  font-size: 16px;
+  font-size: 14px;
 
 }
 /*search bar*/
@@ -47,7 +48,7 @@ body{
   padding: 10px;
 }
 a{
-  font-family: 'Amiri', serif;
+  font-family: 'Roboto Slab', serif;
 }
 .search_box:hover > .search_txt {
   width: 240px;
@@ -109,14 +110,14 @@ a{
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 19px;
+  font-size: 18px;
+  font-family: 'Gruppo', cursive;
 }
 
 .topnav a:hover {
-  background-color: #cd84f1;
+  border-bottom:3px solid #574a49;
   color: black;
   height: 23px;
-  border-radius: 4px 32px 4px 32px;
 }
 
 /*Logo image*/
@@ -132,7 +133,7 @@ a{
   border: 3px solid black;
   text-align: center;
   margin-left:680px;
-  margin-top:-115px;
+  margin-top:-70px;
   border-radius: 30px 30px 10px 10px;
 }
 .login:focus{
@@ -145,9 +146,11 @@ a{
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
+  font-family: 'Gruppo', cursive;
 }
 .login a:hover{
-  background-color:#1e3799;
+  background-color:#44bd32;
+  border:none;
   color: white;
   border-radius: 30px 30px 10px 10px;
 }
@@ -169,6 +172,7 @@ body {
   bottom: 0px;
   left: 0;
   height: 200px;
+  float: bottom;
   background-color: black;
   color: white;
   width: 100%;
@@ -218,4 +222,37 @@ a:hover {
   width: 100vw;
   text-align: center;
   float: left;
+}
+@media only screen and (max-width:800px) {
+  /* For tablets: */
+  .container{
+    width: 100%;
+    float:left;
+  }
+  .upper-box{
+    width: 100%;
+    height:280px;
+  }
+  body{
+    width:100%;
+  }
+  .search_box{
+    margin-left:300px;
+    margin-top:60px;
+  }
+  .search_box:hover >.search_txt{
+    width: 200px;
+  }
+}
+@media only screen and (max-width:500px) {
+  /* For mobile phones: */
+  .icon-wrap, .main-wrap, .form-wrap {
+    width: 100%;
+  }
+  .middle-box{
+    width: 100%;
+  }
+  #footer{
+    height: 100%;
+  }
 }

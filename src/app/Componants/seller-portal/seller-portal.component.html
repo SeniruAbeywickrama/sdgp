@@ -1,0 +1,89 @@
+<div class="main-wrap">
+
+<!--  form for create post. -->
+  <div class="form-wrap">
+    <h1 class="title-wrap">
+      Create Post.
+    </h1>
+    <div class="item-wrap">
+      <div class="icon-wrap" >
+        <label class="label-tag" for="deviceTitle">Post Title :</label>
+        <input [(ngModel)]="postTitle" class="form-input" id="deviceTitle" type="text"  placeholder="" >
+      </div>
+      <br>
+      <div class="icon-wrap" >
+        <label class="label-tag" for="description">Description :</label>
+        <input [(ngModel)]="description" class="form-input" id="description" type="text"  placeholder="" >
+      </div>
+      <br>
+      <div class="icon-wrap" >
+        <label class="label-tag" for="contactInfo">Contact No :</label>
+        <input [(ngModel)]="mobileNo" class="form-input" id="contactInfo" type="tel"  placeholder="" >
+      </div>
+      <br>
+      <br>
+
+    <!--Image Upload-->
+      <div class="icon-wrap" >
+        <input multiple type="file" accept="image/*"
+               id="selectedFile" style="display: none" (change)="changeFiles($event)" class="form-input" [(ngModel)]="deviceImage">
+
+        <button onclick="document.getElementById('selectedFile').click()" class="btn-find-image">Select Your Images</button>
+        <br>
+        <br>
+
+        <div class="main-wrap-for-selected-images">
+          <img *ngIf="urls[0]!=null" [src]="urls[0]" alt="Image"
+               class="selected-image img-thumbnail">
+        </div>
+      </div>
+      <br>
+      <button class="post-btn" (click)="saveSeller()">Post your ad</button>
+      <br>
+    </div>
+  </div>
+
+<!--Post Show-->
+  <div class="post-view">
+
+    <div class="post-page">
+
+      <table class="table">
+        <thead>
+        <tr>
+          <th scope="col"></th>
+          <th scope="col"></th>
+          <th scope="col"></th>
+          <th scope="col"></th>
+          <th scope="col"></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let tempCustomer of sellerList; index as num">
+          <td class="raw-wrap">
+            <img style="width: 200px; height: 200px" src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/sale-instagram-video-ad-template-design-8156716fb5f9d74729f4205db72a88b4.jpg?ts=1579544941">
+          </td>
+          <td class="table-title">{{tempCustomer.title}}</td>
+          <td class="desc-wrap">{{tempCustomer.description}}</td>
+          <td class="mbNumber">{{tempCustomer.mobileNo}}</td>
+
+          <td>
+            <p>
+              <button class="btn-Update"><i class="fas fa-edit"></i></button>
+              <br>
+              <br>
+              <button class="btn-Delete" (click)="deleteCustomer(tempCustomer._id)"><i class="fas fa-trash-alt"></i></button>
+            </p>
+          </td>
+        </tr>
+
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
+
+
+
+</div>

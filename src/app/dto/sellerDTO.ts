@@ -1,15 +1,14 @@
-export default class CustomerDTO{
-  private _storeName: string;
-  private _topic: string;
-  private _description: string;
-  private _contactNo: number;
-  private _image: string;
-  private _other: Array<any>;
+
+export default class sellerDTO{
+   private _title:string;
+   private _description:string;
+   private _contactNo:number;
+   private _image:string;
+   private _other:Array<any>;
 
 
-  constructor(storeName: string, topic: string, description: string, contactNo: number, image: string, other: Array<any>) {
-    this._storeName = storeName;
-    this._topic = topic;
+  constructor(title: string, description: string, contactNo: number, image: string, other: Array<any>) {
+    this._title = title;
     this._description = description;
     this._contactNo = contactNo;
     this._image = image;
@@ -17,20 +16,12 @@ export default class CustomerDTO{
   }
 
 
-  get storeName(): string {
-    return this._storeName;
+  get title(): string {
+    return this._title;
   }
 
-  set storeName(value: string) {
-    this._storeName = value;
-  }
-
-  get topic(): string {
-    return this._topic;
-  }
-
-  set topic(value: string) {
-    this._topic = value;
+  set title(value: string) {
+    this._title = value;
   }
 
   get description(): string {

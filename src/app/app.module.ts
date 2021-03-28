@@ -12,6 +12,11 @@ import {RouterModule} from '@angular/router';
 import {FormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import {CookieModule} from 'ngx-cookie';
+import { SellerPortalComponent } from './Componants/seller-portal/seller-portal.component';
+import { NotFoundPageComponent } from './Componants/not-found-page/not-found-page.component';
+import {SellerService} from './service/seller.service';
+import { LaptopPredictionComponent } from './Componants/price/laptop/laptop-prediction/laptop-prediction.component';
+import { SmartPhonePredictionComponent } from './Componants/price/smartPhone/smart-phone-prediction/smart-phone-prediction.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +25,11 @@ import {CookieModule} from 'ngx-cookie';
     FormPageComponent,
     PriceComponent,
     AboutPageComponent,
-    SignupPageComponent
+    SignupPageComponent,
+    SellerPortalComponent,
+    NotFoundPageComponent,
+    LaptopPredictionComponent,
+    SmartPhonePredictionComponent
   ],
     imports: [
         BrowserModule,
@@ -30,7 +39,8 @@ import {CookieModule} from 'ngx-cookie';
         HttpClientModule,
         CookieModule.forRoot()
     ],
-  providers: [],
+  providers: [
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
