@@ -10,31 +10,28 @@ import {PhoneService} from '../../../../service/phone.service';
 })
 export class SmartPhonePredictionComponent implements OnInit {
   deviceName: '';
-  phoneList: any[] = [];
+  phonePrice: number;
 
   constructor(private router: Router , private mobilePredictService: PhoneService) { }
 
   ngOnInit(): void {
-    this.loadAllPhones();
   }
 
   findPrediction() {
     this.mobilePredictService.checkMobile(this.deviceName).subscribe(resp => {
-      if (resp.message === 'success') {
+        this.phonePrice = resp.message;
         alert('Success');
-      } else {
-        alert('Please try again.');
-      }
-      console.log(resp);
+        console.log(resp);
     }, error => {
       console.log(error);
     });
   }
-  loadAllPhones(){
-    this.mobilePredictService.getAllPhone().subscribe(response => {
-      this.phoneList = response.dataset;
-    }, error => {
-      console.log(error);
-    });
-  }
+
+  // loadAllPhones(){
+  //   this.mobilePredictService.getAllPhone().subscribe(response => {
+  //     this.phoneList = response.dataset;
+  //   }, error => {
+  //     console.log(error);
+  //   });
+  // }
 }
