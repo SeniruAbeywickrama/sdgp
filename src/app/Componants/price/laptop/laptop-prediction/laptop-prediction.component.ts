@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from '@angular/router';
+import {LaptopService} from '../../../../service/laptop.service';
 
 @Component({
   selector: 'app-laptop-prediction',
@@ -7,9 +9,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LaptopPredictionComponent implements OnInit {
 
-  constructor() { }
+  predictedPrice: string;
+  laptopList: any[] = [];
+  currentPrice: string;
+  deviceName: '';
+
+  constructor(private router: Router , private laptopPredictService: LaptopService) { }
 
   ngOnInit(): void {
   }
 
+
+  findLaptopPrediction() {
+    this.laptopPredictService.checkLaptop(this.deviceName).subscribe(resp => {
+      this.predictedPrice = 'LKR ' + resp.message;
+      this.currentPrice = 'LKR ' + resp.current_price;
+      alert('Success');
+      console.log(resp);
+    }, error => {
+      console.log(error);
+    });
+  }
 }
