@@ -10,7 +10,10 @@ import {PhoneService} from '../../../../service/phone.service';
 })
 export class SmartPhonePredictionComponent implements OnInit {
   deviceName: '';
-  phonePrice: number;
+  predictedPrice: string;
+  phoneList: any[] = [];
+  currentPrice: string;
+  dateArray: any[] = [];
 
   constructor(private router: Router , private mobilePredictService: PhoneService) { }
 
@@ -19,7 +22,8 @@ export class SmartPhonePredictionComponent implements OnInit {
 
   findPrediction() {
     this.mobilePredictService.checkMobile(this.deviceName).subscribe(resp => {
-        this.phonePrice = resp.message;
+        this.predictedPrice = 'LKR ' + resp.message;
+        this.currentPrice = 'LKR ' + resp.current_price;
         alert('Success');
         console.log(resp);
     }, error => {
@@ -30,6 +34,11 @@ export class SmartPhonePredictionComponent implements OnInit {
   // loadAllPhones(){
   //   this.mobilePredictService.getAllPhone().subscribe(response => {
   //     this.phoneList = response.dataset;
+  //     this.predictedPrice = response.predictedPrice;
+  //     this.dateArray = response.currentPrice;
+  //     this.aaa = response.deviceName;
+  //
+  //
   //   }, error => {
   //     console.log(error);
   //   });

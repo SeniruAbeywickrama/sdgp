@@ -1,18 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Gruppo&family=Julius+Sans+One&family=Kalam:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+
 
 .searchBq{
 
-  min-height: 90vh;
+  min-height: 80vh;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: center;
   justify-content: center;
   -ms-flex-align: center;
   align-items: center;
-  font-family: 'Poppins', sans-serif;
   background: url("src/assets/phonebg.jpg");
   background-size: cover;
   background-position:center;
   padding: 15px;
+  text-align: center;
+  font-family: 'Acme', sans-serif;
+  font-weight: bold;
+  font-size: 60px;
 }
 .searchBq form legend {
   font-size: 36px;
@@ -123,6 +129,7 @@
 .wrap{
   width: 35%;
   position: absolute;
+  margin-top: 185px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -133,12 +140,12 @@
 .column {
   float: left;
   width: 45%;
-  padding: 20px;
+  padding: 10px;
   height: 220px;
   text-align: center;
   margin: 20px;
   transition: 1s ease;
-
+  border-radius: 200px;
 }
 .column:hover{
   -webkit-transform: scale(1.2);
@@ -152,13 +159,33 @@
   display: table;
   clear: both;
 }
+
+.row{
+  height: 500px;
+}
 .like-page{
   /*float: left;*/
   width: 98%;
   padding: 20px;
   height: 220px;
   text-align: center;
-  margin: 20px;
-  background-color: burlywood;
+  background-color:#30475e;
+}
+.down-wrap{
+  background-color: #222831;
+  padding: 0;
+  height: 100%;
 }
 
+.price{
+  font-family: 'Gruppo', cursive;
+  font-size: 38px;
+  font-weight: bold;
+  color: white;
+
+}
+.price_topic{
+  font-family: 'Gruppo', cursive;
+  font-size: 44px;
+
+}
