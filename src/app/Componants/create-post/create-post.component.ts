@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import {SellerService} from '../../service/seller.service';
 import sellerDTO from '../../dto/sellerDTO';
-import {Router} from '@angular/router';
+import {SellerService} from '../../service/seller.service';
 
 @Component({
-  selector: 'app-seller-portal',
-  templateUrl: './seller-portal.component.html',
-  styleUrls: ['./seller-portal.component.css']
+  selector: 'app-create-post',
+  templateUrl: './create-post.component.html',
+  styleUrls: ['./create-post.component.css']
 })
-export class SellerPortalComponent implements OnInit {
+export class CreatePostComponent implements OnInit {
+
   postTitle = '';
   description = '';
   mobileNo = 0;
@@ -16,20 +16,10 @@ export class SellerPortalComponent implements OnInit {
   filesToUpload: Array<File> = [];
   urls = new Array<string>();
   deviceImage = this.urls[0];
-  constructor(private sellerService: SellerService , private router: Router)  { }
+
+  constructor(private sellerService: SellerService) { }
 
   ngOnInit(): void {
-    this.loadAllSellers();
-  }
-
-  // load all seller data
-
-  loadAllSellers(){
-    this.sellerService.getAllSellers().subscribe(response => {
-      this.sellerList = response.dataSet;
-    }, error => {
-      console.log(error);
-    });
   }
 
   saveSeller() {
@@ -46,6 +36,7 @@ export class SellerPortalComponent implements OnInit {
       console.log(error);
     });
   }
+
 
   changeFiles(event) {
     this.filesToUpload = event.target.files as Array<File>;
@@ -71,17 +62,6 @@ export class SellerPortalComponent implements OnInit {
         };
         reader.readAsDataURL(file);
       }
-      }
-    }
-
-  deleteCustomer(_id: string) {
-    if (confirm('Are You Sure ?')){
-      this.sellerService.deleteCustomer(_id).subscribe(response => {
-        this.loadAllSellers();
-        alert('Deleted !');
-      }, error => {
-        console.log(error);
-      });
     }
   }
 }

@@ -17,6 +17,7 @@ import { NotFoundPageComponent } from './Componants/not-found-page/not-found-pag
 import {SellerService} from './service/seller.service';
 import { LaptopPredictionComponent } from './Componants/price/laptop/laptop-prediction/laptop-prediction.component';
 import { SmartPhonePredictionComponent } from './Componants/price/smartPhone/smart-phone-prediction/smart-phone-prediction.component';
+import { CreatePostComponent } from './Componants/create-post/create-post.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { SmartPhonePredictionComponent } from './Componants/price/smartPhone/sma
     SellerPortalComponent,
     NotFoundPageComponent,
     LaptopPredictionComponent,
-    SmartPhonePredictionComponent
+    SmartPhonePredictionComponent,
+    CreatePostComponent
   ],
     imports: [
         BrowserModule,

@@ -10,6 +10,7 @@ import {NotFoundPageComponent} from './Componants/not-found-page/not-found-page.
 import {AuthGuard} from './guard/auth.guard';
 import {SmartPhonePredictionComponent} from './Componants/price/smartPhone/smart-phone-prediction/smart-phone-prediction.component';
 import {LaptopPredictionComponent} from './Componants/price/laptop/laptop-prediction/laptop-prediction.component';
+import {CreatePostComponent} from './Componants/create-post/create-post.component';
 
 const routes: Routes = [
   {path: '', component : HomePageComponent},
@@ -17,10 +18,11 @@ const routes: Routes = [
   {path: 'About' , component: AboutPageComponent},
   {path: 'Form', component :  FormPageComponent},
   {path: 'SignUp', component: SignupPageComponent},
-  {path: 'SellerPortal', component: SellerPortalComponent, canActivate: [AuthGuard]},
+  {path: 'SellerPortal', component: SellerPortalComponent},
   {path: 'MobilePrediction' , component: SmartPhonePredictionComponent},
   {path: 'LaptopPrediction' , component: LaptopPredictionComponent},
-  {path: '**' , component: NotFoundPageComponent}
+  {path: 'CreatePost' , component: CreatePostComponent,  canActivate: [AuthGuard]},
+  {path: '**' , component: NotFoundPageComponent},
 ];
 
 @NgModule({

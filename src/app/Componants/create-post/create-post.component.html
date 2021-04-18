@@ -1,0 +1,44 @@
+<!--  form for create post. -->
+<div class="full-wrap">
+<div class="form-wrap">
+  <h1 class="title-wrap">
+    Create Post.
+  </h1>
+  <div class="item-wrap">
+    <div class="icon-wrap" >
+      <label class="label-tag" for="deviceTitle">Post Title :</label>
+      <input [(ngModel)]="postTitle" class="form-input" id="deviceTitle" type="text"  placeholder="" >
+    </div>
+    <br>
+    <div class="icon-wrap" >
+      <label class="label-tag" for="description">Description :</label>
+      <input [(ngModel)]="description" class="form-input" id="description" type="text"  placeholder="" >
+    </div>
+    <br>
+    <div class="icon-wrap" >
+      <label class="label-tag" for="contactInfo">Contact No :</label>
+      <input [(ngModel)]="mobileNo" class="form-input" id="contactInfo" type="tel"  placeholder="" >
+    </div>
+    <br>
+    <br>
+
+    <!--Image Upload-->
+    <div class="icon-wrap" >
+      <input multiple type="file" accept="image/*"
+             id="selectedFile" style="display: none" (change)="changeFiles($event)" class="form-input" [(ngModel)]="deviceImage">
+
+      <button onclick="document.getElementById('selectedFile').click()" class="btn-find-image">Select Your Images</button>
+      <br>
+      <br>
+
+      <div class="main-wrap-for-selected-images">
+        <img *ngIf="urls[0]!=null" [src]="urls[0]" alt="Image"
+             class="selected-image img-thumbnail">
+      </div>
+    </div>
+    <br>
+    <button class="post-btn" (click)="saveSeller()">Post your ad</button>
+    <br>
+  </div>
+</div>
+</div>
