@@ -12,31 +12,75 @@
 <div class="wrap">
   <div class="search">
     <input [(ngModel)]="deviceName" type="text" class="searchTerm" placeholder="  Search Here ! " >
-    <button type="submit" class="searchButton" (click)="findPrediction()">  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">-->
-      <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path>-->
-    </svg>
+    <button type="submit" class="searchButton" (click)="findPrediction()">
       <i class="fa fa-search"></i>
     </button>
   </div>
 </div>
 
-</div>
+
 
 <div class="down-wrap">
 <div class="row">
-  <div class="column" style="background-color:#3742fa;">
+  <div class="column" >
     <h2 class="price_topic">Current Price</h2>
     <br>
     <h1 class="price">{{currentPrice}}</h1>
   </div>
-  <div class="column" style="background-color:#3742fa;">
+  <div class="column" >
     <h2 class="price_topic">Next Month Price</h2>
     <br>
     <h1 class="price">{{predictedPrice}}</h1>
   </div>
 </div>
+</div>
 
 <div class="like-page">
-  <h2>Also you like this...</h2>
+  <h2 class="rec"> Recommended Products...</h2>
+
+
+  <section class="products">
+    <div class="product-card">
+      <div class="product-image">
+        <img src="assets/huawei-y7a.jpg">
+      </div>
+      <div class="product-info">
+        <h1>huawei-y7a</h1>
+        <h2>$99.99</h2>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="product-image">
+        <img src="assets/huawei-y7a.jpg">
+      </div>
+      <div class="product-info">
+        <h1>huawei-y7a</h1>
+        <h2>$99.99</h2>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="product-image">
+        <img src="assets/huawei-y7a.jpg">
+      </div>
+      <div class="product-info">
+        <h1>huawei-y7a</h1>
+        <h2>$99.99</h2>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="product-image">
+        <img src="assets/huawei-y7a.jpg">
+      </div>
+      <div class="product-info">
+        <h1>huawei-y7a</h1>
+        <h2>$99.99</h2>
+      </div>
+    </div>
+
+  </section>
 </div>
+
 </div>
