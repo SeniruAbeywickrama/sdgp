@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Carter+One&family=Cinzel:wght@700&family=Hanalei&family=Montserrat&family=Original+Surfer&family=Righteous&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Istok+Web');
 
@@ -59,7 +58,10 @@
   }
 }
 
-
+.firstDes{
+  font-size: 20px;
+  font-family: "Varela Round", sans-serif;
+}
 .first-bar{
   padding:30px 30px;
   background-color:#f1f2f6;
@@ -210,7 +212,7 @@ input#img-6:checked ~ .nav-dots label#img-dot-6 {
 }
 
 div#slider { overflow: hidden;
-height: 680px}
+  height: 680px}
 div#slider figure img { width: 20%; float: left; }
 div#slider figure {
   position: relative;
@@ -247,10 +249,12 @@ div.sellerPicture{
 div.sellerDetails{
   grid-area: sellerD;
   background-color: #00d2d3;
+  border-radius: 30px;
 }
 div.predictDetails{
   grid-area: predictD;
   background-color:  #00d2d3;
+  border-radius: 30px;
 }
 div.predictPicture{
   grid-area: predictP;
@@ -263,6 +267,7 @@ div.recPicture{
 div.recDetails{
   grid-area: recD;
   background-color: #00d2d3;
+  border-radius: 30px;
 }
 .dropbtn {
   background-color: #42075b;
@@ -335,26 +340,42 @@ button.cv{
   padding: 16px;
   font-size: 16px;
 }
-div.description{
+.description{
   height: 350px;
   width: 1fr;
-  background: #00d2d3;
   background: #00d2d3;
   color: #f1f1f1;
   margin: 10px;
   align:justify;
+
 }
 h1.title{
-  font-family:serif;
+  font-family: 'Cinzel', serif;
   font-size: 50px;
+  color: #2c3e50;
 }
 p.des{
-  font-family: Times New Roman;
-  font-size: 25px;
+  font-size: 20px;
+  font-family: "Varela Round", sans-serif;
 }
 ul.list{
   color: white;
-  font-size:20px;
+  font-size:25px;
   font-family: serif;
 }
+
+.sellerPhoto{
+  border-radius: 30px;
+}
+.recPhoto{
+  border-radius: 30px;
+
+
+}
+.predictPhoto{
+  border-radius: 30px;
+
+}
+/*//////////////////////////*/
+
 /*//////////////////////////*/
