@@ -81,15 +81,16 @@
   display: flex;
 }
 
-.ng-autocomplete {
+.searchTerm {
   width: 100%;
-
+  border: 3px solid #00B4CC;
+  border-right: none;
   padding: 5px;
   height: 45px;
   border-radius: 5px 0 0 5px;
   outline: none;
   color: #9DBFAF;
-  font-size: 26px;
+  font-size: 20px;
   font-family: "Gill Sans MT";
   border-radius: 20px;
 }
@@ -178,9 +179,9 @@
 }
 
 .price{
-  margin-top: -20px;
   font-family: 'Gruppo', cursive;
   font-size: 45px;
+  margin-top: -20px;
   font-weight: bold;
   color: #2f3640;
 
@@ -199,7 +200,20 @@
 
 }
 
-.product-card {
+.ng-autocomplete {
+  width: 100%;
+
+  padding: 5px;
+  height: 45px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #9DBFAF;
+  font-size: 26px;
+  font-family: "Gill Sans MT";
+  border-radius: 20px;
+}
+
+.product-card-01 {
   width: 20px;
   height:400px;
   display: flex;
@@ -209,8 +223,41 @@
   background-color: #FFF;
   box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.25);
 
+}
+.product-card-02 {
+  width: 20px;
+  height:400px;
+  display: flex;
+  flex-direction: column;
+  padding: 1%;
+  flex: 1 16%;
+  background-color: #FFF;
+  box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.25);
 
 }
+.product-card-03 {
+  width: 20px;
+  height:400px;
+  display: flex;
+  flex-direction: column;
+  padding: 1%;
+  flex: 1 16%;
+  background-color: #FFF;
+  box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.25);
+
+}
+.product-card-04 {
+  width: 20px;
+  height:400px;
+  display: flex;
+  flex-direction: column;
+  padding: 1%;
+  flex: 1 16%;
+  background-color: #FFF;
+  box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.25);
+
+}
+
 
 .product-image img {
   width: 60%;

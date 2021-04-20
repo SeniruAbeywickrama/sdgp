@@ -32,7 +32,6 @@ export class LaptopPredictionComponent implements OnInit {
 
 
   findLaptopPrediction() {
-    console.log(this.deviceName);
     this.laptopPredictService.checkLaptop(this.deviceName.name).subscribe(resp => {
       this.predictedPrice = 'LKR ' + resp.message;
       this.currentPrice = 'LKR ' + resp.current_price;

@@ -13,17 +13,17 @@
 
     <ng-autocomplete class="ng-autocomplete"
 
-      type="text"
-      [(ngModel)]="deviceName"
-      [data]="phoneBrands"
-      [searchKeyword]="keyword"
-      (selected)='selectEvent($event)'
-      (inputChanged)='onChangeSearch($event)'
-      (inputFocused)='onFocused($event)'
-      [itemTemplate]="itemTemplate"
-      historyIdentifier="phoneBrands"
-      placeholder=" Search Here ! "
-      [notFoundTemplate]="notFoundTemplate">
+                     type="text"
+                     [(ngModel)]="deviceName"
+                     [data]="phoneBrands"
+                     [searchKeyword]="keyword"
+                     (selected)='selectEvent($event)'
+                     (inputChanged)='onChangeSearch($event)'
+                     (inputFocused)='onFocused($event)'
+                     [itemTemplate]="itemTemplate"
+                     historyIdentifier="phoneBrands"
+                     placeholder=" Search Here ! "
+                     [notFoundTemplate]="notFoundTemplate">
     </ng-autocomplete>
     <ng-template #itemTemplate let-item>
       <a [innerHTML]="item.name"></a>
@@ -34,7 +34,6 @@
     </ng-template>
 
 <!--    <input [(ngModel)]="deviceName" type="text" class="searchTerm" placeholder="  Search Here ! ">-->
-
     <button type="submit" class="searchButton" (click)="findLaptopPrediction()">
       <i class="fa fa-search"></i>
     </button>
@@ -60,8 +59,8 @@
 <div class="like-page">
   <h2 class="rec">Recommended Products...</h2>
 
-  <section class="products">
-    <div class="product-card">
+  <section class="products" >
+    <div class="product-card-01" routerLink="/LaptopDetails">
       <div class="product-image">
         <img src="assets/dell.jpg">
       </div>
@@ -71,7 +70,7 @@
       </div>
     </div>
 
-    <div class="product-card">
+    <div class="product-card-02" routerLink="/LaptopDetails">
       <div class="product-image">
         <img src="assets/dell.jpg">
       </div>
@@ -81,7 +80,7 @@
       </div>
     </div>
 
-    <div class="product-card">
+    <div class="product-card-03" routerLink="/LaptopDetails">
       <div class="product-image">
         <img src="assets/dell.jpg">
       </div>
@@ -91,7 +90,7 @@
       </div>
     </div>
 
-    <div class="product-card">
+    <div class="product-card-04" routerLink="/LaptopDetails">
       <div class="product-image">
         <img src="assets/dell.jpg">
       </div>

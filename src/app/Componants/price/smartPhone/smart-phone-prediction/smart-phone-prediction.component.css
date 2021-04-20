@@ -33,6 +33,18 @@
   max-width: 790px;
 
 }
+.ng-autocomplete {
+  width: 100%;
+
+  padding: 5px;
+  height: 45px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #9DBFAF;
+  font-size: 26px;
+  font-family: "Gill Sans MT";
+  border-radius: 20px;
+}
 
 .searchBq form .inner-form {
   width: 100%;
@@ -102,7 +114,7 @@
 
 .searchButton {
   width: 60px;
-  height: 45px;
+  height:45px;
   border: 1px solid #00B4CC;
   background: #00B4CC;
   text-align: center;
@@ -112,18 +124,6 @@
   font-size: 20px;
   border-radius: 20px;
 
-}
-.ng-autocomplete {
-  width: 100%;
-
-  padding: 5px;
-  height: 45px;
-  border-radius: 5px 0 0 5px;
-  outline: none;
-  color: #9DBFAF;
-  font-size: 26px;
-  font-family: "Gill Sans MT";
-  border-radius: 20px;
 }
 .searchButton:hover,.searchTerm:hover{
   box-shadow:
@@ -212,7 +212,7 @@
 
 }
 
-.product-card {
+.product-card-01 {
   width: 20px;
   height:400px;
   display: flex;
@@ -222,6 +222,38 @@
   background-color: #FFF;
   box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.25);
 
+}
+.product-card-02 {
+  width: 20px;
+  height:400px;
+  display: flex;
+  flex-direction: column;
+  padding: 1%;
+  flex: 1 16%;
+  background-color: #FFF;
+  box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.25);
+
+}
+.product-card-03 {
+  width: 20px;
+  height:400px;
+  display: flex;
+  flex-direction: column;
+  padding: 1%;
+  flex: 1 16%;
+  background-color: #FFF;
+  box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.25);
+
+}
+.product-card-04 {
+  width: 20px;
+  height:400px;
+  display: flex;
+  flex-direction: column;
+  padding: 1%;
+  flex: 1 16%;
+  background-color: #FFF;
+  box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.25);
 
 }
 
