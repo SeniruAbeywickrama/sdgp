@@ -21,6 +21,7 @@ import { CreatePostComponent } from './Componants/create-post/create-post.compon
 import { PhoneDetailsComponent } from './Componants/phone-details/phone-details.component';
 import { LaptopDetailsComponent } from './Componants/laptop-details/laptop-details.component';
 import {MobiRecoService} from './service/mobi-reco.service';
+import {AutocompleteLibComponent, AutocompleteLibModule} from 'angular-ng-autocomplete';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import {MobiRecoService} from './service/mobi-reco.service';
     imports: [
         BrowserModule,
         AppRoutingModule,
+        AutocompleteLibModule,
         RouterModule,
         FormsModule,
         HttpClientModule,
