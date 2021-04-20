@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
 import {LoginServiceService} from '../../../../service/login-service.service';
 import {PhoneService} from '../../../../service/phone.service';
+import {MobiRecoService} from '../../../../service/mobi-reco.service';
 
 @Component({
   selector: 'app-smart-phone-prediction',
@@ -14,10 +15,13 @@ export class SmartPhonePredictionComponent implements OnInit {
   phoneList: any[] = [];
   currentPrice: string;
   dateArray: any[] = [];
+  recommendedName = '';
+  recommendedImage = '';
 
-  constructor(private router: Router , private mobilePredictService: PhoneService) { }
+  constructor(private router: Router , private mobileService: MobiRecoService, private mobilePredictService: PhoneService) { }
 
   ngOnInit(): void {
+    this.loadAllMobiRecommands();
   }
 
   findPrediction() {
@@ -25,11 +29,13 @@ export class SmartPhonePredictionComponent implements OnInit {
         this.predictedPrice = 'LKR ' + resp.message;
         this.currentPrice = 'LKR ' + resp.current_price;
         alert('Success');
+        this.loadAllMobiRecommands();
         console.log(resp);
     }, error => {
       console.log(error);
     });
   }
+
 
   // loadAllPhones(){
   //   this.mobilePredictService.getAllPhone().subscribe(response => {
@@ -43,4 +49,13 @@ export class SmartPhonePredictionComponent implements OnInit {
   //     console.log(error);
   //   });
   // }
+
+  loadAllMobiRecommands(){
+    this.mobileService.checkMobileRecommendation().subscribe(response => {
+      this.recommendedName = response.messageName01;
+      this.recommendedImage = response.massageImage;
+    }, error => {
+      console.log(error);
+    });
+  }
 }

@@ -11,6 +11,8 @@ import {AuthGuard} from './guard/auth.guard';
 import {SmartPhonePredictionComponent} from './Componants/price/smartPhone/smart-phone-prediction/smart-phone-prediction.component';
 import {LaptopPredictionComponent} from './Componants/price/laptop/laptop-prediction/laptop-prediction.component';
 import {CreatePostComponent} from './Componants/create-post/create-post.component';
+import {PhoneDetailsComponent} from './Componants/phone-details/phone-details.component';
+import {LaptopDetailsComponent} from './Componants/laptop-details/laptop-details.component';
 
 const routes: Routes = [
   {path: '', component : HomePageComponent},
@@ -22,6 +24,8 @@ const routes: Routes = [
   {path: 'MobilePrediction' , component: SmartPhonePredictionComponent},
   {path: 'LaptopPrediction' , component: LaptopPredictionComponent},
   {path: 'CreatePost' , component: CreatePostComponent,  canActivate: [AuthGuard]},
+  {path: 'MobileDetails' , component: PhoneDetailsComponent},
+  {path: 'LaptopDetails' , component: LaptopDetailsComponent},
   {path: '**' , component: NotFoundPageComponent},
 ];
 

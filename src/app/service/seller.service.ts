@@ -13,7 +13,7 @@ export class SellerService {
 
 
   public saveSeller(seller: sellerDTO): Observable<any>{
-    return this.http.post(this.baseUrl + 'saveSeller', {
+    return this.http.post('http://127.0.0.1:3000/api/v1/sellerUserRoute/saveSeller', {
       title: seller.title,
       description: seller.description,
       mobileNo: seller.contactNo,
@@ -22,11 +22,11 @@ export class SellerService {
     });
   }
   public getAllSellers(): Observable<any>{
-    return this.http.get(this.baseUrl + 'getAllSeller', {
+    return this.http.get('http://127.0.0.1:3000/api/v1/sellerUserRoute/getAllSeller', {
     });
   }
   public deleteCustomer(id: string): Observable<any> {
-    return this.http.delete(this.baseUrl + 'deleteSeller',
+    return this.http.delete('http://127.0.0.1:3000/api/v1/sellerUserRoute/deleteSeller',
       {headers: {id}});
   }
 }

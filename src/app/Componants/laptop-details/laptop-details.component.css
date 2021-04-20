@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap');
+
+table {
+  border-collapse: collapse;
+  width: 70%;
+  margin-left:220px;
+}
+
+td {
+  border: 1px solid #dddddd;
+  padding: 8px;
+  text-align: center;
+  height: 70px;
+  font-family: 'Balsamiq Sans', cursive;
+}
+th{
+  border: 1px solid #a9a2a2;
+  background-color:#5352ed;
+  padding: 8px;
+  text-align: center;
+  height: 70px;
+  font-size: 24px;
+  font-family: 'Balsamiq Sans', cursive;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+.main-wrap{
+  margin-left: 400px;
+  margin-top: 50px;
+}
+
+
+.product-image img {
+  width: 45%;
+  height:350px;
+}
+
+.product-card {
+  width: 850px;
+  height:380px;
+  display: flex;
+  flex-direction: column;
+  padding: 1%;
+  flex: 1 16%;
+  background-color: #FFF;
+  box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.25);
+}
+.product-info {
+  margin-top:-250px;
+  margin-left: 260px;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+}
+.vl {
+  border-left: 1px solid black;
+  height: 300px;
+  position: absolute;
+  margin-left: 440px;
+  margin-top: 50px;
+}
