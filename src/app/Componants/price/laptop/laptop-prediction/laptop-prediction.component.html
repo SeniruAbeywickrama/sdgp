@@ -10,7 +10,31 @@
 </div>
 <div class="wrap">
   <div class="search">
-    <input [(ngModel)]="deviceName" type="text" class="searchTerm" placeholder="  Search Here ! ">
+
+    <ng-autocomplete class="ng-autocomplete"
+
+      type="text"
+      [(ngModel)]="deviceName"
+      [data]="phoneBrands"
+      [searchKeyword]="keyword"
+      (selected)='selectEvent($event)'
+      (inputChanged)='onChangeSearch($event)'
+      (inputFocused)='onFocused($event)'
+      [itemTemplate]="itemTemplate"
+      historyIdentifier="phoneBrands"
+      placeholder=" Search Here ! "
+      [notFoundTemplate]="notFoundTemplate">
+    </ng-autocomplete>
+    <ng-template #itemTemplate let-item>
+      <a [innerHTML]="item.name"></a>
+    </ng-template>
+
+    <ng-template #notFoundTemplate let-notFound>
+      <div [innerHTML]="notFound"></div>
+    </ng-template>
+
+<!--    <input [(ngModel)]="deviceName" type="text" class="searchTerm" placeholder="  Search Here ! ">-->
+
     <button type="submit" class="searchButton" (click)="findLaptopPrediction()">
       <i class="fa fa-search"></i>
     </button>

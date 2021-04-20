@@ -18,9 +18,7 @@ import {SellerService} from './service/seller.service';
 import { LaptopPredictionComponent } from './Componants/price/laptop/laptop-prediction/laptop-prediction.component';
 import { SmartPhonePredictionComponent } from './Componants/price/smartPhone/smart-phone-prediction/smart-phone-prediction.component';
 import { CreatePostComponent } from './Componants/create-post/create-post.component';
-import { PhoneDetailsComponent } from './Componants/phone-details/phone-details.component';
-import { LaptopDetailsComponent } from './Componants/laptop-details/laptop-details.component';
-import {MobiRecoService} from './service/mobi-reco.service';
+import { AutocompleteLibModule } from 'angular-ng-autocomplete';
 
 @NgModule({
   declarations: [
@@ -34,14 +32,13 @@ import {MobiRecoService} from './service/mobi-reco.service';
     NotFoundPageComponent,
     LaptopPredictionComponent,
     SmartPhonePredictionComponent,
-    CreatePostComponent,
-    PhoneDetailsComponent,
-    LaptopDetailsComponent,
+    CreatePostComponent
   ],
     imports: [
         BrowserModule,
         AppRoutingModule,
         RouterModule,
+        AutocompleteLibModule,
         FormsModule,
         HttpClientModule,
         CookieModule.forRoot()
