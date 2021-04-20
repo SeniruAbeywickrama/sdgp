@@ -4,7 +4,7 @@
 
 .searchBq{
 
-  min-height: 80vh;
+  min-height: 50vh;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: center;
@@ -102,7 +102,7 @@
 
 .searchButton {
   width: 60px;
-  height: 62px;
+  height: 45px;
   border: 1px solid #00B4CC;
   background: #00B4CC;
   text-align: center;
@@ -112,6 +112,18 @@
   font-size: 20px;
   border-radius: 20px;
 
+}
+.ng-autocomplete {
+  width: 100%;
+
+  padding: 5px;
+  height: 45px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #9DBFAF;
+  font-size: 26px;
+  font-family: "Gill Sans MT";
+  border-radius: 20px;
 }
 .searchButton:hover,.searchTerm:hover{
   box-shadow:
@@ -129,7 +141,7 @@
 .wrap{
   width: 35%;
   position: absolute;
-  margin-top: 185px;
+  margin-top: 60px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -180,9 +192,10 @@
 
 .price{
   font-family: 'Gruppo', cursive;
-  font-size: 38px;
+  margin-top: -20px;
+  font-size: 45px;
   font-weight: bold;
-  color: white;
+  color: #2f3640;
 
 }
 .price_topic{
