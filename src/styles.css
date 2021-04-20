@@ -182,11 +182,26 @@ body {
   float: left;
   margin: 0 28px;
   width: 20%;
+  font-family: 'Big Shoulders Display', cursive;
+  font-weight: 300;
 }
 
 .InnerHeading {
   font-weight: 500;
   color: gray;
+}
+.headName{
+  font-family: 'Big Shoulders Display', cursive;
+  font-weight: 300;
+}
+.footerDescription{
+  font-family:'Big Shoulders Display', cursive;
+  font-weight: 150;
+}
+.component{
+  font-family:'Big Shoulders Display', cursive;
+  font-weight: 150;
+
 }
 
 ol {
@@ -256,3 +271,5 @@ a:hover {
     height: 100%;
   }
 }
+
+
