@@ -17,6 +17,17 @@ export class SmartPhonePredictionComponent implements OnInit {
   dateArray: any[] = [];
   recommendedName = '';
   recommendedImage = '';
+  recommendedName02 = '';
+  recommendedImage02 = '';
+  recommendedName03 = '';
+  recommendedImage03 = '';
+  recommendedName04 = '';
+  recommendedImage04 = '';
+  recommendedPrice01 = '';
+  recommendedPrice02 = '';
+  recommendedPrice03 = '';
+  recommendedPrice04 = '';
+
 
   keyword = 'name';
   public phoneBrands = [{id: 1, name: 'Huawei nova 7i', } , {id: 2, name: 'Huawei P40 Pro', } , {id: 3, name: 'Huawei Y5p', } , {id: 4, name: 'Huawei Y6p', }, {id: 5, name: 'Huawei Y7', } ,, {id: 6, name: 'Huawei Y7 Pro', } , {id: 7, name: 'Huawei Y7a', } ,, {id: 8, name: 'Huawei Y7p', } ,, {id: 9, name: 'Huawei Y9', } ,, {id: 10, name: 'Huawei Y9 Prime', } ,
@@ -56,24 +67,32 @@ export class SmartPhonePredictionComponent implements OnInit {
     });
   }
 
-
-  // loadAllPhones(){
-  //   this.mobilePredictService.getAllPhone().subscribe(response => {
-  //     this.phoneList = response.dataset;
-  //     this.predictedPrice = response.predictedPrice;
-  //     this.dateArray = response.currentPrice;
-  //     this.aaa = response.deviceName;
-  //
-  //
-  //   }, error => {
-  //     console.log(error);
-  //   });
-  // }
-
   loadAllMobiRecommands(){
     this.mobileService.checkMobileRecommendation().subscribe(response => {
       this.recommendedName = response.messageName01;
       this.recommendedImage = response.massageImage;
+      this.recommendedPrice01 = response.messagePrice01;
+    }, error => {
+      console.log(error);
+    });
+    this.mobileService.checkMobileRecommendation02().subscribe(response => {
+      this.recommendedName02 = response.messageName02;
+      this.recommendedImage02 = response.massageImage02;
+      this.recommendedPrice02 = response.messagePrice02;
+    }, error => {
+      console.log(error);
+    });
+    this.mobileService.checkMobileRecommendation03().subscribe(response => {
+      this.recommendedName03 = response.messageName03;
+      this.recommendedImage03 = response.massageImage03;
+      this.recommendedPrice03 = response.messagePrice03;
+    }, error => {
+      console.log(error);
+    });
+    this.mobileService.checkMobileRecommendation04().subscribe(response => {
+      this.recommendedName04 = response.messageName04;
+      this.recommendedImage04 = response.massageImage04;
+      this.recommendedPrice04 = response.messagePrice04;
     }, error => {
       console.log(error);
     });
