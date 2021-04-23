@@ -19,6 +19,7 @@ export class FormPageComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  // navigate to sign up page
   accessSignPage() {
     this.router.navigate(['/SignUp']).then(resp => {
       console.log('Done');
@@ -27,11 +28,11 @@ export class FormPageComponent implements OnInit {
     });
   }
 
+  // get user login data
   loginUser() {
     this.loginService.loginUser(this.email, this.password).subscribe(resp => {
       if (resp.message === 'success') {
-        // 24 hours for cookie
-        const todayDate = new Date();
+        const todayDate = new Date();       // 24 hours for cookie
         const tomorrow = new Date(todayDate);
         tomorrow.setDate(tomorrow.getDate() + 1);
         const cookieOption = {
@@ -39,8 +40,7 @@ export class FormPageComponent implements OnInit {
         };
         this.cookieService.put('tokenData', resp.token, cookieOption);
         alert('Success');
-        // import to main page
-        this.router.navigate(['/']).then();
+        this.router.navigate(['/']).then();       // import to main page
       } else {
         alert('Please Try Again!');
       }

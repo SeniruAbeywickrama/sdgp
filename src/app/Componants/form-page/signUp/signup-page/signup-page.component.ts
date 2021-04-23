@@ -21,13 +21,12 @@ export class SignupPageComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  // method to register user details.
   registerUser() {
       this.loginService.registerUser(this.email, this.password).subscribe(resp => {
         console.log(resp);
-        // show a alert
-        alert('Account Created.');
-        // if account create successful then load the sign-in page
-        this.router.navigate(['/Form']).then();
+        alert('Account Created.');         // show a alert
+        this.router.navigate(['/Form']).then();     // if account create successful then load the sign-in page
       }, error => {
         console.log(error);
       });

@@ -22,6 +22,7 @@ export class CreatePostComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  //pass the user data to database
   saveSeller() {
     const dto = new sellerDTO(
       this.postTitle.trim(),
@@ -37,7 +38,7 @@ export class CreatePostComponent implements OnInit {
     });
   }
 
-
+  // add images and use validations
   changeFiles(event) {
     this.filesToUpload = event.target.files as Array<File>;
     this.urls = [];

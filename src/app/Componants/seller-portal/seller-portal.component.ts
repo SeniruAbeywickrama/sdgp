@@ -23,7 +23,6 @@ export class SellerPortalComponent implements OnInit {
   }
 
   // load all seller data
-
   loadAllSellers(){
     this.sellerService.getAllSellers().subscribe(response => {
       this.sellerList = response.dataSet;
@@ -32,6 +31,7 @@ export class SellerPortalComponent implements OnInit {
     });
   }
 
+  // save seller details to Object file
   saveSeller() {
     const dto = new sellerDTO(
       this.postTitle.trim(),

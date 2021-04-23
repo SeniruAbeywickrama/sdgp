@@ -10,6 +10,8 @@ import {MobiRecoService} from '../../../../service/mobi-reco.service';
   styleUrls: ['./smart-phone-prediction.component.css']
 })
 export class SmartPhonePredictionComponent implements OnInit {
+
+  // creating variables and arrays
   deviceName: any;
   predictedPrice: string;
   phoneList: any[] = [];
@@ -30,6 +32,7 @@ export class SmartPhonePredictionComponent implements OnInit {
 
 
   keyword = 'name';
+  // assigning array values for autocomplte search bar
   public phoneBrands = [{id: 1, name: 'Huawei nova 7i', } , {id: 2, name: 'Huawei P40 Pro', } , {id: 3, name: 'Huawei Y5p', } , {id: 4, name: 'Huawei Y6p', }, {id: 5, name: 'Huawei Y7', } ,, {id: 6, name: 'Huawei Y7 Pro', } , {id: 7, name: 'Huawei Y7a', } ,, {id: 8, name: 'Huawei Y7p', } ,, {id: 9, name: 'Huawei Y9', } ,, {id: 10, name: 'Huawei Y9 Prime', } ,
     {id: 11, name: 'Huawei Y9s', } , {id: 12, name: 'Apple iPhone 8', } , {id: 13, name: 'Apple iPhone 11', } , {id: 14, name: 'Apple iPhone 11 Pro Max', } , {id: 15, name: 'Apple iPhone 12', } , {id: 16, name: 'Apple iPhone 12 mini', } , {id: 17, name: 'Apple iPhone 12 Pro', } , {id: 18, name: 'Apple iPhone 12 Pro Max', } , {id: 19, name: 'Apple iPhone SE', } , {id: 20, name: 'One plus 8', } ,
     {id: 21, name: 'One plus 8T', } , {id: 22, name: 'One plus nord', } , {id: 23, name: 'Samsung Galaxy A01', } , {id: 24, name: 'Samsung Galaxy A10s', } , {id: 25, name: 'Samsung Galaxy A21s 64GB', } , {id: 26, name: 'Samsung Galaxy A21s 128GB', } , {id: 27, name: 'Samsung Galaxy A51', } , {id: 28, name: 'Samsung Galaxy A71', } , {id: 29, name: 'Samsung Galaxy M01s', } ,  {id: 30, name: 'Samsung Galaxy M02s', } ,
@@ -54,7 +57,7 @@ export class SmartPhonePredictionComponent implements OnInit {
   ngOnInit(): void {
     this.loadAllMobiRecommands();
   }
-
+// getting current and prediction prices from the backend
   findPrediction() {
     this.mobilePredictService.checkMobile(this.deviceName.name).subscribe(resp => {
         this.predictedPrice = 'LKR ' + resp.message;
@@ -66,7 +69,7 @@ export class SmartPhonePredictionComponent implements OnInit {
       console.log(error);
     });
   }
-
+// getting recommended device details from backend
   loadAllMobiRecommands(){
     this.mobileService.checkMobileRecommendation().subscribe(response => {
       this.recommendedName = response.messageName01;

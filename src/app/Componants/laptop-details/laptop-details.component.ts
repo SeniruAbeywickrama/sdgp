@@ -14,17 +14,6 @@ export class LaptopDetailsComponent implements OnInit {
   constructor(private router: Router , private laptopService: LapRecoService) { }
 
   ngOnInit(): void {
-    this.getLaptopDetail();
-  }
-
-
-  getLaptopDetail() {
-    this.laptopService.getLaptopDetail().subscribe(resp => {
-      this.detailList = resp.dataSet;
-      console.log(resp);
-    }, error => {
-      console.log(error);
-    });
   }
 
 
